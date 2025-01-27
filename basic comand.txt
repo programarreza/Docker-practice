@@ -1,0 +1,20 @@
+Docker Cheat Sheet: https://find-saminravi99.notion.site/Docker-Cheat-Sheet-10dc48b8ac8c80b79f73ece2abfc6841
+Bind Mount, Dev Container & Ts Node Dev Cheat Sheet: https://find-saminravi99.notion.site/Bind-Mount-Dev-Container-Ts-Node-Dev-Cheat-Sheet-117c48b8ac8c804aabb5ed0f09bc69a9
+
+
+1. docker image create: docker build -t <REPOSITORY-NAME>:<TAG-NAME> .
+1. docker run: docker run -p 5000:5000 --rm <image id>
+2. docker run by repo-name & tag-name: docker run -p 5000:5000 --rm <REPOSITORY-NAME>:<TAG-NAME>
+3. docker image rename: docker image tag <OLD-NAME:TAG> <NEW-NAME:TAG>
+
+2. docker start:  docker container start <container name>
+3. docker stop: docker container stop <container name>
+4. docker run detach mode: docker run -p 5000:5000 -d <image id>
+
+5. container run attach mode: docker container start -a <container name>
+6. See images: docker images
+7. spesefic container remove: docker container rm <container name1, 2, 3, 4>
+
+8. all container remove : docker container prune
+9. spesefic image remove: docker image rmi <image id 1, 2, 3, 4 >
+10.all images remove: docker image rmi prune
