@@ -1,11 +1,13 @@
 Docker Cheat Sheet: https://find-saminravi99.notion.site/Docker-Cheat-Sheet-10dc48b8ac8c80b79f73ece2abfc6841
 Bind Mount, Dev Container & Ts Node Dev Cheat Sheet: https://find-saminravi99.notion.site/Bind-Mount-Dev-Container-Ts-Node-Dev-Cheat-Sheet-117c48b8ac8c804aabb5ed0f09bc69a9
+Docker Network Key Points: https://find-saminravi99.notion.site/Docker-Network-Key-Points-11dc48b8ac8c80469b31c81e7604cc34
+Docker Multi Container Cheat Sheet: https://find-saminravi99.notion.site/Docker-Multi-Container-Cheat-Sheet-123c48b8ac8c804089a3ea15d0900557
 
 
 1. docker image create: docker build -t <REPOSITORY-NAME>:<TAG-NAME> .
 1. docker run: docker run -p 5000:5000 --rm <image id>
 2. docker run by repo-name & tag-name: docker run -p 5000:5000 --rm <REPOSITORY-NAME>:<TAG-NAME>
-3. docker run and volumn create: docker run -p 5000:5000 --name ts-container --rm -v ts-docker-logs:/app/logs ts-docker:v2
+3. docker run and volumn create: docker run -p 5000:5000 --name ts-container -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app/ -v //app/node_modules --env-file .env  --rm ts-docker:v4
 
 3. docker image rename: docker image tag <OLD-NAME:TAG> <NEW-NAME:TAG>
 
@@ -20,3 +22,8 @@ Bind Mount, Dev Container & Ts Node Dev Cheat Sheet: https://find-saminravi99.no
 8. all container remove : docker container prune
 9. spesefic image remove: docker image rmi <image id 1, 2, 3, 4 >
 10.all images remove: docker image rmi prune
+
+11. docker network create: docker network create <network-name>
+12. see network : docker network ls
+13. docker run by custom network in: docker run -p 5000:5000 --name ts-container -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app/ -v //app/node_modules --env-file .env  --rm --network ts-docker-network ts-docker:v4
+
