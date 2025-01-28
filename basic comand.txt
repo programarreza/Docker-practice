@@ -5,6 +5,8 @@ Bind Mount, Dev Container & Ts Node Dev Cheat Sheet: https://find-saminravi99.no
 1. docker image create: docker build -t <REPOSITORY-NAME>:<TAG-NAME> .
 1. docker run: docker run -p 5000:5000 --rm <image id>
 2. docker run by repo-name & tag-name: docker run -p 5000:5000 --rm <REPOSITORY-NAME>:<TAG-NAME>
+3. docker run and volumn create: docker run -p 5000:5000 --name ts-container --rm -v ts-docker-logs:/app/logs ts-docker:v2
+
 3. docker image rename: docker image tag <OLD-NAME:TAG> <NEW-NAME:TAG>
 
 2. docker start:  docker container start <container name>
