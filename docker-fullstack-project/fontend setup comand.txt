@@ -1,0 +1,7 @@
+1. add Dockerfile
+2. add .dockerignore
+3. create image: docker build -t ts-docker-frontend:v5
+4. update .env.local file: NEXT_PUBLIC_API_URL=http://<backend-container-name>:5000
+5. add .env.local in: WATCHPACK_POLLING=true
+6. build image: docker build -t ts-docker-frontend:v5
+7. project run: docker run --name ts-docker-frontend-container --rm --network ts-docker-net --env-file .env.local -w //app -v "//$(pwd)"://app -v //app/node_modules -p 3000:3000 ts-docker-frontend:v5

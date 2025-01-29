@@ -1,0 +1,8 @@
+BACKEND:
+--------
+1. create network: docker network create <network-name>
+2. pull mongo image: docker pull mongo
+3. run db to this network area in: docker run --name mongodb --rm -v ts-docker-db:/data/db --network ts-docker-net -e MONGO_INITDB_ROOT_USERNAME=ts-docker -e MONGO_INITDB_ROOT_PASSWORD=ts-docker mongo
+4. update db_url: DB_URL=mongodb://ts-docker:ts-docker@<db-container-name>:27017/ts-docker-db?authSource=admin 
+5. image build: docker build -t ts-docker-backend:v5 .
+6. project run: docker run --name ts-docker-backend-container --rm --network ts-docker-net --env-file .env -w //app -v ts-docker-logs://app/logs -v "//$(pwd)"://app -v //app/node_modules -p 5000:5000 ts-docker-backend:v5

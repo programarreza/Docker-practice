@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\errors\\.56f758e79d1c56cc42e41b49391555ea038ee70c-audit.json",
+    "files": [
+        {
+            "date": 1738059640961,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\errors\\docker-2025-01-28-16-error.log",
+            "hash": "74dda3248a0509a6e7f94c69be463f3f30bdb7e80995b61d8eb1f9bd4ec21ef3"
+        }
+    ],
+    "hashType": "sha256"
+}

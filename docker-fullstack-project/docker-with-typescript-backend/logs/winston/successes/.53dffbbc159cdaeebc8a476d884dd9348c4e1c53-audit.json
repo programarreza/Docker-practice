@@ -1,0 +1,40 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\.53dffbbc159cdaeebc8a476d884dd9348c4e1c53-audit.json",
+    "files": [
+        {
+            "date": 1738059640947,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-20-40-success.log",
+            "hash": "0f1ded003416999b6d5c9a9f0566304b9b4fab7f995b459d9df2dfb8bc21df18"
+        },
+        {
+            "date": 1738059702103,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-21-42-success.log",
+            "hash": "35f4f2147cb125a95622dbcbc4302a12eaae971998e15bda6ea95432f65d8906"
+        },
+        {
+            "date": 1738059753679,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-22-33-success.log",
+            "hash": "fc55fe62317b12a2b1308f74c19998762a2cc5582722df4f9e7db8d9009834d3"
+        },
+        {
+            "date": 1738059762570,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-22-42-success.log",
+            "hash": "ddd62344079f53a1abac89ccf8ddbbee9acb9f976a47c501890ae8840d8ca4be"
+        },
+        {
+            "date": 1738061173684,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-46-13-success.log",
+            "hash": "9788c8afba6e4d61bcbbbf70a435a3b78ba28458aa30bf2853d2a90bd8197b75"
+        },
+        {
+            "date": 1738061176474,
+            "name": "E:\\Lavel-2 Mission\\Level-2 Projects\\Docker\\docker-fullstack-project\\docker-with-typescript-backend\\logs\\winston\\successes\\docker-2025-01-28-16-46-16-success.log",
+            "hash": "116f849c9dc630a35a57136346ffec119759bb0aece469820689f14d701ed770"
+        }
+    ],
+    "hashType": "sha256"
+}
