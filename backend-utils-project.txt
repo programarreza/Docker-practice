@@ -1,0 +1,11 @@
+1.first-project: node_utility
+	A.create Dockerfile => 
+		1.FROM node:20-alpine
+		2.WORKDIR /app
+	B.create image: docker build -t node-util .
+	C.check image: docker images
+
+2.second project: docker-project-with-utility-container
+	A.docker run --name node-util -w //app -v "//$(pwd)"://app -it --rm -d node-util
+	B.docker exec -it node-util npm init -y
+	C.docker exec -it node-util npm install express and other package

@@ -1,0 +1,48 @@
+services:
+  mongodb: # DB Container name
+    image: "mongo" # Pull from Docker Hub
+    volumes:
+      - ts-docker-db:/data/db
+
+    env_file: # DB env file path
+      - ./docker-with-typescript-backend/.env
+
+  ts-docker-backend-container: # Backend Container name
+    build:
+      context: ./docker-with-typescript-backend
+      dockerfile: Dockerfile
+
+    ports:
+      - "5000:5000"
+
+    volumes:
+      - ts-docker-logs:/app/logs # Named volume
+      - ./docker-with-typescript-backend:/app # Bind mount
+      - /app/node_modules # Anonymous volume
+
+    env_file: # Backend env file path
+      - ./docker-with-typescript-backend/.env
+
+    depends_on:
+      - mongodb # DB Container name
+
+  ts-docker-frontend-container: # Frontend Container name
+    build:
+      context: ./docker-with-nextjs-frontend
+      dockerfile: Dockerfile
+
+    ports:
+      - "3000:3000"
+
+    volumes:
+      - ./docker-with-nextjs-frontend:/app # Bind mount
+
+    env_file:
+      - ./docker-with-nextjs-frontend/.env.local # Frontend env file path 
+
+    depends_on:
+      - ts-docker-backend-container # Backend Container name
+
+volumes:
+  ts-docker-db:
+  ts-docker-logs:
